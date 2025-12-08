@@ -2,8 +2,12 @@
 from sklearn import svm, datasets
 import pandas as pd
 
+# 0 . กำหนดตำแหน่งไฟล์ CSV ที่มีข้อมูล Iris จาก GitHub
+csv_url = 'https://raw.githubusercontent.com/thammarat-ai/prinAI6-28/refs/heads/main/chapter3/iris.csv'
+
 # 1. อ่านข้อมูลจากไฟล์ CSV ด้วย Pandas
-df = pd.read_csv('iris.csv') 
+# กำหนดชื่อคอลัมน์เอง และข้ามแถวแรก (skiprows=1)
+df = pd.read_csv(csv_url, names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'], skiprows=1)
 
 # 2. X: เลือกคุณลักษณะ 2 ตัวแรก (Sepal length, Sepal width)
 # .values เพื่อแปลง DataFrame เป็น NumPy array
