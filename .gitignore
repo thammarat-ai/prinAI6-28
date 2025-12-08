@@ -1,0 +1,97 @@
+# ------------------------------------------------
+# 1. Python & General Virtual Environments
+# ------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments (ครอบคลุมชื่อยอดนิยม)
+venv/
+env/
+.venv/
+.env/
+pip-selfcheck.json
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# ------------------------------------------------
+# 2. Django Specifics
+# ------------------------------------------------
+# Database (ปกติเราจะไม่ commit database หลักขึ้น git)
+*.sqlite3
+db.sqlite3
+
+# Static & Media (ไฟล์ที่ user อัปโหลด หรือ generated static files)
+media/
+staticfiles/
+/static/  # ถ้าโฟลเดอร์ static ของคุณเป็นที่เก็บ file ที่ collect แล้ว ให้เปิดบรรทัดนี้
+
+# Local Settings (เก็บคีย์หรือ config ลับเฉพาะเครื่อง)
+*/local_settings.py
+
+# Logs
+*.log
+
+# ------------------------------------------------
+# 3. AI / Machine Learning / Data Science
+# ------------------------------------------------
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+# ถ้าไม่อยาก commit output ของ notebook (optional)
+# *.ipynb
+
+# Model Weights (ไฟล์โมเดลขนาดใหญ่ ไม่ควรขึ้น Git ปกติ)
+*.h5
+*.hdf5
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.pb
+*.pkl
+*.joblib
+
+# Large Data Files (Datasets)
+data/
+dataset/
+datasets/
+*.csv
+*.tsv
+*.json
+*.zip
+*.tar.gz
+*.rar
+
+# GIS / Geospatial Data (เผื่อโปรเจกต์ LULC/AlphaEarth)
+*.tif
+*.tiff
+*.shp
+*.shx
+*.qgz
+
+# ------------------------------------------------
+# 4. Editors & OS (ขยะที่เกิดจากเครื่องเรา)
+# ------------------------------------------------
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# ------------------------------------------------
+# 5. Environment Variables & Security (สำคัญมาก!)
+# ------------------------------------------------
+.env
+.env.*
+! .env.example
